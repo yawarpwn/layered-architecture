@@ -1,13 +1,14 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
-import { productRoutes } from "./presentation/routes.ts";
+import { productRoutes } from "./presentation/routes.js";
+import { utilTest} from './utils/index.js'
 
 const app = new Hono();
 
 app.get("/", (c) => {
   return c.text("Test Hono!");
 });
-app.use("/api/products", productRoutes);
+app.route("/api/products", productRoutes);
 
 serve(
   {
@@ -16,5 +17,6 @@ serve(
   },
   (info) => {
     console.log(`Server is running on http://localhost:${info.port}`);
+    console.log(utilTest()
   },
 );

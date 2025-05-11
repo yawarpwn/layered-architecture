@@ -6,7 +6,6 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "moduleResolution": "nodenext",
-    "allowImportingTsExtensions": true,
     "types": ["node"],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",

@@ -1,7 +1,7 @@
-// src/types/product.ts
 import { z } from "zod";
-import { products } from "../database/schema";
-import { InferSelectModel, InferInsertModel } from "drizzle-orm";
+import { products } from "../database/schema.js";
+import { orders, orderItems } from "../database/schema.js";
+import type { InferSelectModel, InferInsertModel } from "drizzle-orm";
 
 // Definir tipos desde el esquema de la base de datos
 export type Product = InferSelectModel<typeof products>;
@@ -23,7 +23,6 @@ export type ProductCreateInput = z.infer<typeof productSchema>;
 export type ProductUpdateInput = z.infer<typeof productUpdateSchema>;
 
 // src/types/order.ts
-import { orders, orderItems } from "../database/schema";
 
 // Definir tipos desde el esquema de la base de datos
 export type Order = InferSelectModel<typeof orders>;

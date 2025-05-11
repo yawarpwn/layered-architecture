@@ -1,6 +1,6 @@
 // src/presentation/controllers/productController.ts
 import type { Context } from "hono";
-import { ProductService } from "../business/product.service.ts";
+import { ProductService } from "../business/product.service.js";
 
 // Instanciar el servicio
 const productService = new ProductService();

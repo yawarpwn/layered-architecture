@@ -1,7 +1,7 @@
-// src/persistence/productRepository.ts
-import { db } from "../database/client";
-import { products } from "../database/schema";
-import { Product, NewProduct } from "../types/product";
+// src/persistence/productRepository.js
+import { db } from "../database/client.js";
+import { products } from "../database/schema.js";
+import type { Product, NewProduct } from "../types/index.js";
 import { eq } from "drizzle-orm";
 
 export class ProductRepository {

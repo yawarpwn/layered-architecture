@@ -1,12 +1,11 @@
-// src/business/productService.ts
-import { ProductRepository } from "../persistence/product.repository";
+import { ProductRepository } from "../persistence/product.repository.js";
 import {
-  Product,
-  ProductCreateInput,
-  ProductUpdateInput,
+  type Product,
+  type ProductCreateInput,
+  type ProductUpdateInput,
   productSchema,
   productUpdateSchema,
-} from "../types";
+} from "../types/index.js";
 import { ZodError } from "zod";
 
 export class ProductService {
